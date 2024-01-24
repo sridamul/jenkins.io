@@ -9,4 +9,9 @@ layout: frame
   - page.precontent.each do |pre|
     = partial("#{pre}.html.haml")
 
+- if !page.hideSearchBar
+  - site.showSearchBar = true
+- else 
+  - site.showSearchBar = false
+
 = content
